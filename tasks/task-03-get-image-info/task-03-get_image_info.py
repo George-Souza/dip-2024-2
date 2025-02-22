@@ -12,7 +12,13 @@ def get_image_info(image):
     """
     
     ### START CODE HERE ###
-    ### TODO
+    height, width = image.shape[:2]
+    dtype = image.dtype
+    depth = image.shape[2] if len(image.shape) > 2 else 1
+    min_val = image.min()
+    max_val = image.max()
+    mean_val = image.mean()
+    std_val = image.std()
     ### END CODE HERE ###
 
     return {
